@@ -17,25 +17,29 @@ struct CreatedLab: Codable {
 class LabQuestionsTests: XCTestCase {
   func testPostLabQuestion() {
     // arrange
-    let title = "How do we get the image"
+    let title = "How do we get the image - David"
     let labName = "Concurrency Lab"
     let description = "Not able to use the svg url, what else can we do to get the image url"
-    let createdAt = String.getISOTimestamp()
+    let createdAt = String.getISOTimestamp() // getISOTimestamp() is an extension on String fro (String+Extension.swift)
     
     let lab = PostedQuestion(title: title, labName: labName, description: description, createdAt: createdAt)
     
-    let data = try! JSONEncoder().encode(lab)
+    let data = try! JSONEncoder().encode(lab) // encoding lab to data (gets back "data")
     
     let exp = XCTestExpectation(description: "lab posted successfully")
     
     let url = URL(string: "https://5df04c1302b2d90014e1bd66.mockapi.io/questions")!
     
-    var request = URLRequest(url: url)
-    request.httpMethod = "POST"
-    request.httpBody = data
+    
+    // url is a string
+    // URLRequest allows you to package the data
+    var request = URLRequest(url: url) // 1. url
+    request.httpMethod = "POST" // "GET" is the default request so will need to change to "POST" b/c we are making POST request (HTTP Method type)
+    request.httpBody = data// 3. Data we are sending to the web api
     
     // required to be valid JSON data being uploaded
-    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    // "application/json" is the data type you are sending
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type") // 4. type of data / multimedia sending
     
     // act
     NetworkHelper.shared.performDataTask(with: request) { (result) in

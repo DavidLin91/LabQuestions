@@ -66,9 +66,22 @@
                         <viewLayoutGuide key="safeArea" id="qrN-3q-BgG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Question" id="40G-VI-Fej">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="seR-oK-E7I"/>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="1sf-pM-d7w"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="seR-oK-E7I">
+                            <connections>
+                                <action selector="cancel:" destination="04E-ax-osA" id="PaY-u3-dbn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="1sf-pM-d7w">
+                            <connections>
+                                <action selector="createQuestion:" destination="04E-ax-osA" id="kxB-st-Oab"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="labPickerView" destination="YMj-8j-OEz" id="7QX-1E-Ed8"/>
+                        <outlet property="questionTextView" destination="Urh-bm-bj7" id="iUv-ez-9jK"/>
+                        <outlet property="titleTextField" destination="cUH-Jx-5oT" id="otL-fK-GDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kla-1h-wTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

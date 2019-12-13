@@ -10,7 +10,7 @@ import Foundation
 
 struct Question: Decodable {
     let id: String
-    //let createAt: String
+    let createdAt: String // creating a date stamp
     let name: String // random user name
     let avatar: String // random user avatar
     let title: String

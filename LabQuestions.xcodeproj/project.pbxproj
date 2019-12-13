@@ -23,6 +23,7 @@
 		576D0E5D23A1B2B2002D6E16 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D0E5C23A1B2B2002D6E16 /* String+Extensions.swift */; };
 		636A4BAF23A2AE7B00827EA0 /* LabQuestionsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BAE23A2AE7B00827EA0 /* LabQuestionsAPIClient.swift */; };
 		636A4BB123A2AF0C00827EA0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BB023A2AF0C00827EA0 /* Question.swift */; };
+		63BC45F823A3E572000AC8AF /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC45F723A3E572000AC8AF /* PostedQuestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		576D0E5C23A1B2B2002D6E16 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		636A4BAE23A2AE7B00827EA0 /* LabQuestionsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabQuestionsAPIClient.swift; sourceTree = "<group>"; };
 		636A4BB023A2AF0C00827EA0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		63BC45F723A3E572000AC8AF /* PostedQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				636A4BB023A2AF0C00827EA0 /* Question.swift */,
+				63BC45F723A3E572000AC8AF /* PostedQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BC45F823A3E572000AC8AF /* PostedQuestion.swift in Sources */,
 				573109D023A08CBB00635ECE /* AppError.swift in Sources */,
 				573109B123A08C1000635ECE /* LabQuestionsController.swift in Sources */,
 				5768048623A1C40100571F2F /* CreateQuestionController.swift in Sources */,
